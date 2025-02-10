@@ -1,65 +1,114 @@
-/* https://www.w3schools.com/howto/howto_css_two_columns.asp */
-/* https://developer.mozilla.org/es/docs/Web/CSS/box-sizing */
-/* Así definimos el comportamiento de caja para todos los elementos */
+/* Reset básico de márgenes y padding */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-  }
-  
-/* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
-.columna {
-float: left;
-padding: 10px;
-min-height: 500px;
 }
 
-.izquierda {
-width: 25%;
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
 
-.derecha {
-width: 75%;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* Clear floats despues de las columnas para eliminar la superposición */
-.filla:after {
-content: "";
-display: table;
-clear: both;
+/* Barra lateral */
+.sidebar {
+    flex: 1 1 250px; /* Flexibilidad con un tamaño base de 250px */
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-#c1 {
-    background-color:#aaa;
+.cover-container {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-#c2 {
-    background-color:#bbb;
-}
-
-/* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
-/* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
-
-img {
+.cover {
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
-.iresponsive {
-    padding: 0 6px;
-    float: left;
-    width: 50%;
-  }
+nav ul {
+    list-style: none;
+}
 
-/* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
-/* Así conseguimos que el contenido se vea bien en dispositvos móviles */
+nav ul li {
+    margin: 10px 0;
+}
 
-@media screen and (max-width: 600px) {
-    .columna {
-      width: 100%;
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+}
+
+/* Estilo del contenido principal */
+.content {
+    flex: 2 1 700px; /* Toma el doble de espacio que la sidebar */
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-top: 30px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
     }
 
-    .iresponsive {
-        width: 100%;
+    .sidebar {
+        flex: 1 1 100%;
+    }
+
+    .content {
+        flex: 1 1 100%;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
     }
 }
 
-/* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
