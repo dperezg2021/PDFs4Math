@@ -1,86 +1,25 @@
-/* Reset básico de márgenes y padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* Barra lateral */
-.sidebar {
-    flex: 1 1 250px; /* Flexibilidad con un tamaño base de 250px */
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.cover-container {
-    margin-bottom: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    margin: 10px 0;
-}
-
-nav ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px;
-    display: block;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #34495e;
-}
-
-/* Estilo del contenido principal */
-.content {
-    flex: 2 1 700px; /* Toma el doble de espacio que la sidebar */
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-}
-
-
-
-
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #000;  /* Fondo negro */
+    color: #ecf0f1;  /* Texto en color claro para contrastar con el fondo oscuro */
     line-height: 1.6;
-    padding: 0;  /* Eliminamos padding global para evitar espacios extra */
-    margin: 0;   /* Eliminamos margen global */
+    padding: 0;
+    margin: 0;
 }
 
+/* Encabezado */
 .header {
     text-align: center;
-    background-color: #3498db;  /* Un color de fondo para diferenciar el encabezado */
-    padding: 30px 0;  /* Espaciado alrededor */
+    background-color: #2980b9;  /* Un color más suave para el encabezado */
+    padding: 30px 0;
 }
 
 .cover {
-    width: 60%;  /* Ajustamos el tamaño de la imagen */
+    width: 60%;
     height: auto;
-    margin: 0 auto; /* Centramos la imagen */
-    display: block; /* Aseguramos que la imagen esté centrada */
+    margin: 0 auto;
+    display: block;
     border-radius: 8px;
 }
 
@@ -90,10 +29,34 @@ h1 {
     margin-top: 20px;
 }
 
+/* Barra lateral */
+.sidebar {
+    flex: 1 1 250px;
+    background-color: #2c3e50;  /* Fondo más oscuro para la barra lateral */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+nav ul li a {
+    color: #ecf0f1;  /* Color de los enlaces */
+}
+
+nav ul li a:hover {
+    background-color: #34495e;  /* Color al pasar el mouse */
+}
+
+/* Contenido principal */
+.content {
+    flex: 2 1 700px;
+    background-color: #1c2833;  /* Fondo más oscuro para el contenido */
+    padding: 30px;
+    border-radius: 8px;
+}
 
 .content h1 {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #ecf0f1;
     margin-bottom: 20px;
 }
 
@@ -105,7 +68,7 @@ h1 {
 
 .content p {
     font-size: 1.1rem;
-    color: #7f8c8d;
+    color: #bdc3c7;  /* Texto un poco más suave */
     line-height: 1.6;
 }
 
@@ -131,4 +94,3 @@ h1 {
         font-size: 1.5rem;
     }
 }
-
