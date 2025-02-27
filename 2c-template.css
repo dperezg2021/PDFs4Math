@@ -87,7 +87,12 @@ nav ul li a:hover {
     color: #bdc3c7;  /* Texto un poco más suave */
     line-height: 1.6;
 }
-
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
 /* Diseño responsivo */
 @media (max-width: 768px) {
     .container {
